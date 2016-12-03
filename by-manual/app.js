@@ -34,6 +34,9 @@ app.get('/', function (req, res) {
   res.send('Hello World!');
 });
 
+app.get('/HW', function (req, res) {
+  res.send('HELLO WORLD!');
+});
 // サーバーを起動する部分
 var server = app.listen(3000, function () {
   var host = server.address().address;
