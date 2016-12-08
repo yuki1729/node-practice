@@ -34,6 +34,28 @@ app.get('/', function (req, res) {
   res.send('Hello World!');
 });
 
+/*
+app.METHOD(PATH, HANDLER)
+各部分の意味は次のとおりです。
+
+app は、express のインスタンスです。
+METHOD は、HTTP 要求メソッド です。
+PATH は、サーバー上のパスです。
+HANDLER は、ルートが一致したときに実行される関数です。
+Express の基本的なルーティング : http://expressjs.com/ja/starter/basic-routing.html
+ */
+
+/*
+HTTP 要求メソッド
+とりあえずgetがアクセスするよ〜メソッドとおぼえておけば良い
+
+ */
+app.get(
+  '/book', //PATH サーバ上のパス
+  function (req, res) {res.send('Book!');  } //HANDLER 実行される関数
+);
+
+
 app.get('/HW', function (req, res) {
   res.send('HELLO WORLD!');
 });
