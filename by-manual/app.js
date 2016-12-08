@@ -52,7 +52,19 @@ HTTP 要求メソッド
  */
 app.get(
   '/book', //PATH サーバ上のパス
-  function (req, res) {res.send('Book!');  } //HANDLER 実行される関数
+  function (req, res) {
+    res.send('Book!');
+    console.log("req.originalUrl:" + req.originalUrl);
+    console.log("res.hostname:" + req.hostname);
+
+
+    } //HANDLER 実行される関数
+  /*
+    req:要求オブジェクト Express 4.x - API リファレンス : http://expressjs.com/ja/4x/api.html#req
+    URLアクセス時の受取り値 cookieとかqueryとか
+    res:応答オブジェクト Express 4.x - API リファレンス : http://expressjs.com/ja/4x/api.html#res
+    アクセス後の返答値？…だとおもう
+   */
 );
 
 
